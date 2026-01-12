@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <header class="nav">
+      <div class="container nav-inner">
+        <a class="logo" href="#home">
+          <img src="logo.jpeg" alt="Lucy logo" class="site-logo">
+          <span class="sr-only">Lucy</span>
+        </a>
+        <nav class="nav-links" id="navLinks">
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <section id="home" class="hero">
+        <div class="container hero-inner">
+          <div class="hero-left">
+            <h1>Hi, I'm Lucy.</h1>
+            <h2>Front-End Developer</h2>
+            <p class="lead">I build responsive, well-structured web interfaces with a focus on clarity, usability, and consistency across devices.</p>
+            <p class="lead">My work involves implementing interface designs into functional websites, organizing layouts effectively, and ensuring smooth interaction and navigation.</p>
+            <div class="hero-cta">
+              <a class="btn primary" href="#contact">Contact</a>
+              <a class="btn outline" href="Lucy amarachi resume.pdf">Resume</a>
+            </div>
+          </div>
+          <div class="hero-right">
+            <div class="hero-visual" aria-hidden="true">
+              <img src="heroimage.jpeg" alt="Hero image">
+            </div>
+          </div>
+        </div>
+        <svg class="divider" viewBox="0 0 1200 100" preserveAspectRatio="none" aria-hidden="true">
+          <path d="M0,100 C300,0 900,0 1200,100 L1200,0 L0,0 Z" fill="#000000" opacity="0.8"></path>
+        </svg>
+      </section>
+
+      <section id="about" class="about">
+        <div class="container">
+          <h2 class="section-title">ABOUT ME</h2>
+          <p class="about-text">I'm a front-end developer passionate about creating clean, responsive web interfaces that prioritize usability and user experience.</p>
+          <p class="about-text">I specialize in converting design concepts into functional websites, with expertise in modern layout techniques, responsive design, and maintaining code clarity for long-term maintainability.</p>
+          <p class="about-text">Beyond coding, I enjoy staying updated with the latest web technologies and best practices, and I'm always eager to collaborate on innovative projects that make a positive impact.</p>
+          <h3 class="skills-title">SKILLS/TOOLS I USE</h3>
+          <div class="skills">
+            <div class="skill"><img src="Javascript.png" alt="Javascript" class="skill-icon"></div>
+            <div class="skill"><img src="ReactJs.png" alt="ReactJs" class="skill-icon"></div>
+            <div class="skill"><img src="Tailwind.png" alt="Tailwind CSS" class="skill-icon"></div>
+            <div class="skill"><img src="Typescript.png" alt="TypeScript" class="skill-icon"></div>
+            <div class="skill"><img src="Bootstrap.png" alt="Bootstrap" class="skill-icon"></div>
+            <div class="skill"><img src="NestJs.png" alt="NextJs" class="skill-icon"></div>  
+            <div class="skill"><img src="API.png" alt="APIs" class="skill-icon"></div>
+            <div class="skill"><img src="git.png" alt="Git and Version Control" class="skill-icon"></div>  
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" class="projects">
+        <div class="container">
+          <h2 class="section-title">Projects</h2>
+          <div class="project-list">
+            <article class="project">
+              <div class="project-media"><img src="firstproject.png" alt="Project One Image" class="project-image"></div>
+              <div class="project-info">
+                <h3>Project One</h3>
+                <p>Responsive landing page built with HTML, CSS, and small JS interactions.</p>
+                <div class="project-links">
+                  <a class="link-btn" href="https://github.com/lucyamarachi81-ux/Restaurant-website.git" aria-label="GitHub">
+                    <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .5C5.73.5.75 5.48.75 11.75c0 4.95 3.24 9.15 7.74 10.64.57.1.78-.25.78-.55 0-.27-.01-1.16-.02-2.1-3.15.69-3.82-1.52-3.82-1.52-.52-1.32-1.28-1.67-1.28-1.67-1.05-.72.08-.71.08-.71 1.16.08 1.77 1.2 1.77 1.2 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.72-1.55-2.52-.29-5.17-1.26-5.17-5.6 0-1.24.44-2.25 1.16-3.04-.12-.29-.5-1.46.11-3.04 0 0 .96-.31 3.14 1.16a10.9 10.9 0 0 1 2.86-.38c.97 0 1.95.13 2.86.38 2.18-1.47 3.14-1.16 3.14-1.16.61 1.58.23 2.75.11 3.04.72.79 1.16 1.8 1.16 3.04 0 4.35-2.66 5.3-5.19 5.59.41.36.78 1.06.78 2.14 0 1.55-.01 2.8-.01 3.18 0 .3.2.66.79.55 4.5-1.5 7.74-5.7 7.74-10.64C23.25 5.48 18.27.5 12 .5z"/></svg>
+                    <span>GitHub</span>
+                  </a>
+                  <a class="link-btn" href="https://amarachiy.netlify.app" aria-label="Live demo">
+                    <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2L2 7l10 5 10-5-10-5zm0 5.2L16.6 9 12 11.8 7.4 9 12 7.2zM4 11.6V17l8 4 8-4v-5.4L12 15 4 11.6z"/></svg>
+                    <span>Netlify</span>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <article class="project">
+              <div class="project-media"><img src="Secondproject.png" alt="Project Two Image" class="project-image"></div>
+              <div class="project-info">
+                <h3>Project Two</h3>
+                <p>Interactive web app with stateful UI and API integration.</p>
+                <div class="project-links">
+                  <a class="link-btn" href="https://github.com/lucyamarachi81-ux/Technew.git">
+                    <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .5C5.73.5.75 5.48.75 11.75c0 4.95 3.24 9.15 7.74 10.64.57.1.78-.25.78-.55 0-.27-.01-1.16-.02-2.1-3.15.69-3.82-1.52-3.82-1.52-.52-1.32-1.28-1.67-1.28-1.67-1.05-.72.08-.71.08-.71 1.16.08 1.77 1.2 1.77 1.2 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.72-1.55-2.52-.29-5.17-1.26-5.17-5.6 0-1.24.44-2.25 1.16-3.04-.12-.29-.5-1.46.11-3.04 0 0 .96-.31 3.14 1.16a10.9 10.9 0 0 1 2.86-.38c.97 0 1.95.13 2.86.38 2.18-1.47 3.14-1.16 3.14-1.16.61 1.58.23 2.75.11 3.04.72.79 1.16 1.8 1.16 3.04 0 4.35-2.66 5.3-5.19 5.59.41.36.78 1.06.78 2.14 0 1.55-.01 2.8-.01 3.18 0 .3.2.66.79.55 4.5-1.5 7.74-5.7 7.74-10.64C23.25 5.48 18.27.5 12 .5z"/></svg>
+                    <span>GitHub</span>
+                  </a>
+                  <a class="link-btn" href="https://lucy2.netlify.app">
+                    <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2L2 7l10 5 10-5-10-5zm0 5.2L16.6 9 12 11.8 7.4 9 12 7.2zM4 11.6V17l8 4 8-4v-5.4L12 15 4 11.6z"/></svg>
+                    <span>Netlify</span>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <article class="project">
+              <div class="project-media"><img src="Thirdproject.png" alt="Project Three Image" class="project-image"></div>
+              <div class="project-info">
+                <h3>Project Three</h3>
+                <p>Design-to-code project showing strong visual polish and accessibility.</p>
+                <div class="project-links">
+                  <a class="link-btn" href="https://github.com/lucyamarachi81-ux/assement.git">
+                    <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .5C5.73.5.75 5.48.75 11.75c0 4.95 3.24 9.15 7.74 10.64.57.1.78-.25.78-.55 0-.27-.01-1.16-.02-2.1-3.15.69-3.82-1.52-3.82-1.52-.52-1.32-1.28-1.67-1.28-1.67-1.05-.72.08-.71.08-.71 1.16.08 1.77 1.2 1.77 1.2 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.72-1.55-2.52-.29-5.17-1.26-5.17-5.6 0-1.24.44-2.25 1.16-3.04-.12-.29-.5-1.46.11-3.04 0 0 .96-.31 3.14 1.16a10.9 10.9 0 0 1 2.86-.38c.97 0 1.95.13 2.86.38 2.18-1.47 3.14-1.16 3.14-1.16.61 1.58.23 2.75.11 3.04.72.79 1.16 1.8 1.16 3.04 0 4.35-2.66 5.3-5.19 5.59.41.36.78 1.06.78 2.14 0 1.55-.01 2.8-.01 3.18 0 .3.2.66.79.55 4.5-1.5 7.74-5.7 7.74-10.64C23.25 5.48 18.27.5 12 .5z"/></svg>
+                    <span>GitHub</span>
+                  </a>
+                  <a class="link-btn" href="https://calister1.netlify.app">
+                    <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2L2 7l10 5 10-5-10-5zm0 5.2L16.6 9 12 11.8 7.4 9 12 7.2zM4 11.6V17l8 4 8-4v-5.4L12 15 4 11.6z"/></svg>
+                    <span>Netlify</span>
+                  </a>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="contact">
+        <div class="container contact-inner">
+          <div class="contact-left">
+            <h2>Get in touch</h2>
+            <p>If you'd like to collaborate or hire me, send a message — I'd love to hear about your project.</p>
+            <div class="socials">
+              <a href="https://www.linkedin.com/in/amarachiagbo" aria-label="LinkedIn">
+                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5C4.98 4.88 3.86 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM0 24h5V8H0v16zM8 8h4.8v2.2h.1c.7-1.3 2.5-2.6 5.1-2.6C22.7 7.6 24 10 24 14.4V24h-5v-8.8c0-2.1-.1-4.8-3-4.8-3 0-3.5 2.2-3.5 4.6V24H8V8z"/></svg>
+                <span>LinkedIn</span>
+              </a>
+              <a href="https://www.github.com/lucyamarachi81-ux" aria-label="GitHub">
+                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .5C5.73.5.75 5.48.75 11.75c0 4.95 3.24 9.15 7.74 10.64.57.1.78-.25.78-.55 0-.27-.01-1.16-.02-2.1-3.15.69-3.82-1.52-3.82-1.52-.52-1.32-1.28-1.67-1.28-1.67-1.05-.72.08-.71.08-.71 1.16.08 1.77 1.2 1.77 1.2 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.72-1.55-2.52-.29-5.17-1.26-5.17-5.6 0-1.24.44-2.25 1.16-3.04-.12-.29-.5-1.46.11-3.04 0 0 .96-.31 3.14 1.16a10.9 10.9 0 0 1 2.86-.38c.97 0 1.95.13 2.86.38 2.18-1.47 3.14-1.16 3.14-1.16.61 1.58.23 2.75.11 3.04.72.79 1.16 1.8 1.16 3.04 0 4.35-2.66 5.3-5.19 5.59.41.36.78 1.06.78 2.14 0 1.55-.01 2.8-.01 3.18 0 .3.2.66.79.55 4.5-1.5 7.74-5.7 7.74-10.64C23.25 5.48 18.27.5 12 .5z"/></svg>
+                <span>GitHub</span>
+              </a>
+              <a href="https://lucyamarachi81.netlify.app" aria-label="Netlify">
+                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2L2 7l10 5 10-5-10-5zm0 5.2L16.6 9 12 11.8 7.4 9 12 7.2zM4 11.6V17l8 4 8-4v-5.4L12 15 4 11.6z"/></svg>
+                <span>Netlify</span>
+              </a>
+            </div>
+          </div>
+          <form class="contact-form" id="contactForm">
+            <label>Full name<input type="text" name="name" required></label>
+            <label>Email<input type="email" name="email" required></label>
+            <label>Message<textarea name="message" rows="5" required></textarea></label>
+            <button class="btn primary" type="submit">Send Message</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div>©2026 All rights reserved</div>
+        <div class="footer-socials">
+          <a href="https://www.linkedin.com/in/amarachiagbo" aria-label="LinkedIn">
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5C4.98 4.88 3.86 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM0 24h5V8H0v16zM8 8h4.8v2.2h.1c.7-1.3 2.5-2.6 5.1-2.6C22.7 7.6 24 10 24 14.4V24h-5v-8.8c0-2.1-.1-4.8-3-4.8-3 0-3.5 2.2-3.5 4.6V24H8V8z"/></svg>
+          </a>
+          <a href="https://www.github.com/lucyamarachi81-ux" aria-label="GitHub">
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .5C5.73.5.75 5.48.75 11.75c0 4.95 3.24 9.15 7.74 10.64.57.1.78-.25.78-.55 0-.27-.01-1.16-.02-2.1-3.15.69-3.82-1.52-3.82-1.52-.52-1.32-1.28-1.67-1.28-1.67-1.05-.72.08-.71.08-.71 1.16.08 1.77 1.2 1.77 1.2 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.72-1.55-2.52-.29-5.17-1.26-5.17-5.6 0-1.24.44-2.25 1.16-3.04-.12-.29-.5-1.46.11-3.04 0 0 .96-.31 3.14 1.16a10.9 10.9 0 0 1 2.86-.38c.97 0 1.95.13 2.86.38 2.18-1.47 3.14-1.16 3.14-1.16.61 1.58.23 2.75.11 3.04.72.79 1.16 1.8 1.16 3.04 0 4.35-2.66 5.3-5.19 5.59.41.36.78 1.06.78 2.14 0 1.55-.01 2.8-.01 3.18 0 .3.2.66.79.55 4.5-1.5 7.74-5.7 7.74-10.64C23.25 5.48 18.27.5 12 .5z"/></svg>
+          </a>
+          <a href="https://lucyamarachi81.netlify.app" aria-label="Netlify">
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2L2 7l10 5 10-5-10-5zm0 5.2L16.6 9 12 11.8 7.4 9 12 7.2zM4 11.6V17l8 4 8-4v-5.4L12 15 4 11.6z"/></svg>
+          </a>
+          <a href="https://www.instagram.com/luciagrace320" aria-label="Instagram">
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2L2 7l10 5 10-5-10-5zm0 5.2L16.6 9 12 11.8 7.4 9 12 7.2zM4 11.6V17l8 4 8-4v-5.4L12 15 4 11.6z"/></svg>
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="index.js"></script>
+  </body>
+</html>
