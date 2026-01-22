@@ -41,7 +41,7 @@ body::before{
 
 /* NAV */
 .nav{
-  background:#000000;
+  background: linear-gradient(135deg, rgba(12,255,255,0.08) 0%, rgba(208,0,211,0.06) 45%, rgba(16,4,37,0.5) 100%);
   backdrop-filter:blur(6px);
   position:sticky;
   top:0;
@@ -134,13 +134,16 @@ body::before{
   margin:12px 0 20px
 }
 .hero-visual{
-  max-width:420px
+  max-width:420px;
+  position:relative
 }
 .hero-visual img {
-   width: 100%;
-    height: auto;
-     border-radius: 50%; 
-    }
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+  box-shadow: 0 20px 60px rgba(208, 0, 211, 0.3), 0 0 40px rgba(12, 255, 255, 0.1);
+  backdrop-filter: blur(1px);
+}
 .divider{
   display:block;
   width:100%;
@@ -192,30 +195,40 @@ body::before{
   color:#ffffff
 }
 .skills{
-  display:grid;
-  grid-template-columns:repeat(4, 1fr);
-  gap:0px;
-  justify-items:center
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+  justify-content:center;
+  align-items:center;
+  max-width:600px;
+  margin:0 auto
 }
 .skill{
   display:flex;
-  gap:10px;
+  flex-direction:column;
+  gap:8px;
   align-items:center;
-  padding:8px 12px;
+  padding:12px;
   border-radius:8px;
   background:transparent;
-  color:#ffffff
+  color:#ffffff;
+  transition:transform .32s ease, box-shadow .32s ease
 }
 .skill .skill-icon{
   width:36px;
   height:36px;
   color:var(--primary1);
 }
+.skill .skill-name{
+  margin:0;
+  font-size:0.85rem;
+  text-align:center;
+  font-weight:500;
+  color:#ffffff;
+  line-height:1.2
+}
 
 /* small animation for skill icons */
-.skill{
-  transition:transform .32s ease, box-shadow .32s ease
-}
 .skill:hover{
   transform:translateY(-6px);
   box-shadow:0 10px 30px rgba(255,255,255,0.1)
@@ -293,7 +306,7 @@ body::before{
   padding:8px 12px;
   border-radius:8px;
   text-decoration:none;
-  color:var(--dark);
+  color:white;
   border:1px solid rgba(16,4,37,0.06);
   transition:color .18s, transform .14s
 }
@@ -316,13 +329,19 @@ body::before{
 }
 .contact-inner{
   display:grid;
-  grid-template-columns:1fr 420px;
+  grid-template-columns:1fr 550px;
   gap:28px;
-  align-items:start
+  align-items:stretch
 }
 .contact-left h2{
   margin-top:0;
   color:#fff;
+}
+.contact-left{
+  min-height:400px;
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-start
 }
 .contact-form{
   display:flex;
@@ -389,3 +408,11 @@ body::before{
   .hero-left{order:1}
   .project{grid-template-columns:1fr}
 }
+
+
+
+a   link-btn  {
+  color: white;
+}                                 
+
+
