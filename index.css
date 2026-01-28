@@ -53,86 +53,81 @@ body::before{
   align-items:center;
   justify-content:space-between
 }
-.logo{
-  font-weight:700;
-  color:#ffffff;
-  text-decoration:none;
-  font-size:1.1rem
-}
-.logo-accent{
-  color:var(--primary1);
-  margin-left:4px
-}
 
-/* logo image */
-.site-logo{
-  height:44px;
-  display:block
+/* ensure absolutely positioned nav-links anchor to this container */
+.nav-inner{position:relative}
+.logo{
+  display: flex;
+  align-items: center;
 }
-.sr-only{
-  position:absolute!important;height:1px;
-  width:1px;
-  overflow:hidden;
-  clip:rect(1px,1px,1px,1px);
-  white-space:nowrap
-}
+/* NAVBAR: links and hamburger behavior */
 .nav-links{
   display:flex;
-  gap:18px
+  gap:20px;
+  align-items:center;
 }
 .nav-links a{
-  color:#ffffff;
+  color:#e6e6ff;
   text-decoration:none;
-  padding:8px;
-  border-radius:6px;
-  transition:color .18s, background .18s
+  font-weight:600;
+  padding:6px 4px;
 }
-.nav-links a:hover{
-  color:var(--primary1)
-}
-.hamburger
-{display:none;
-  background:none;
+.nav-links a:hover{color:var(--primary1);text-decoration:underline}
+
+.hamburger{
+  display:none; /* hidden on wide screens */
+  width:40px;
+  height:40px;
+  background:transparent;
   border:0;
-  padding:8px;
-  cursor:pointer
+  align-items:center;
+  justify-content:center;
+  flex-direction:column;
+  cursor:pointer;
 }
 .hamburger span{
   display:block;
   width:22px;
-  height:2px;
-  background:#cccccc;
+  height:3px;
+  background:#fff; /* white bars */
   margin:4px 0;
-  border-radius:2px
+  border-radius:2px;
+  transition:transform .18s, opacity .18s, background .18s;
+}
+.hamburger.active span:nth-child(1){transform:translateY(5px) rotate(45deg)}
+.hamburger.active span:nth-child(2){opacity:0}
+.hamburger.active span:nth-child(3){transform:translateY(-5px) rotate(-45deg)}
+/* Logo image sizing */
+.site-logo{
+  width:56px;
+  height:auto;
+  display:block;
+  border-radius:8px;
 }
 
-/* HERO */
+/* visually hide text intended only for screen-readers */
+.sr-only{
+  position: absolute !important;
+  width: 1px; height: 1px;
+  padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0 0 0 0);
+  white-space: nowrap; border: 0;
+}
+
+/* Hero layout */
 .hero{
-  background: #000000;
-  padding:64px 0 20px;
-  position:relative
+  padding:72px 0;
 }
 .hero-inner{
   display:grid;
   grid-template-columns:1fr 420px;
-  gap:32px;
-  align-items:center
+  gap:36px;
+  align-items:center;
+  padding:8px 0;
 }
-.hero-left h1{
-  font-size:2.1rem;
-  margin:0;
-  color:#ffffff
-}
-.hero-left h2{
-  font-size:1.4rem;
-  margin:8px 0 0 0;
-  color:#cccccc;
-  font-weight:500
-}
-.lead{
-  color:#ffffff;
-  margin:12px 0 20px
-}
+.hero-left h1{font-size:2.4rem;margin:0}
+.hero-left h2{margin:6px 0 12px;color: #dcdcdc;font-weight:500}
+.hero-right .hero-visual{max-width:420px;margin:0 auto}
 .hero-visual{
   max-width:420px;
   position:relative
@@ -140,7 +135,6 @@ body::before{
 .hero-visual img {
   width: 100%;
   height: auto;
-  border-radius: 50%;
   box-shadow: 0 20px 60px rgba(208, 0, 211, 0.3), 0 0 40px rgba(12, 255, 255, 0.1);
   backdrop-filter: blur(1px);
 }
@@ -148,6 +142,78 @@ body::before{
   display:block;
   width:100%;
   height:60px;border:0;
+}
+
+/* Contact section */
+.contact{
+  padding:64px 0 80px;
+  background: linear-gradient(180deg, rgba(0,0,0,0.0), rgba(0,0,0,0.04));
+}
+.contact-inner{
+  display:flex;
+  justify-content:center;
+}
+.contact-card{
+  background:#0b0b0b;
+  padding:32px;
+  border-radius:12px;
+  max-width:720px;
+  width:100%;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+  color:#ffffff;
+}
+.contact-card h3{
+  margin:0 0 8px 0;
+  font-size:1.6rem;
+}
+.contact-sub{
+  color:#bdbdbd;
+  margin-bottom:18px;
+}
+.contact-methods{
+  display:flex;
+  gap:12px;
+  margin-bottom:18px;
+  flex-wrap:wrap;
+}
+.contact-item{
+  display:flex;
+  flex-direction:column;
+  background:rgba(255,255,255,0.03);
+  padding:12px 14px;
+  border-radius:8px;
+  text-decoration:none;
+  color:inherit;
+}
+.contact-label{
+  font-size:0.75rem;
+  color:#9a9a9a;
+}
+.contact-value{
+  font-weight:600;
+  color:#ffffff;
+}
+.contact-form{
+  display:grid;
+  gap:10px;
+  margin-top:6px;
+}
+.contact-form input,
+.contact-form textarea{
+  width:100%;
+  padding:12px 14px;
+  border-radius:8px;
+  border:1px solid rgba(255,255,255,0.06);
+  background: rgba(255,255,255,0.02);
+  color:#fff;
+}
+.contact-form input::placeholder,
+.contact-form textarea::placeholder{
+  color:#9b9b9b;
+}
+.contact-form .btn.primary{
+  width:160px;
+  padding:10px 14px;
 }
 
 .btn{
@@ -240,13 +306,20 @@ body::before{
   background:#000000;
 }
 .project{
-  display:grid;
-  grid-template-columns:320px 1fr;
+  display:flex;
   gap:20px;
   align-items:center;
   background:transparent;
   padding:16px;
-  border-radius:12px
+  border-radius:12px;
+  flex-wrap:nowrap;
+}
+/* media (image) fixed width, info grows */
+.project-media{flex:0 0 320px}
+.project-info{flex:1}
+/* Alternate project layout: even items reverse order (media on right) */
+.project:nth-child(even){
+  flex-direction:row-reverse;
 }
 /* alternate project backgrounds for visual separation */
 .project:nth-child(odd){
@@ -330,19 +403,67 @@ body::before{
 .contact-inner{
   display:grid;
   grid-template-columns:1fr 550px;
+  grid-auto-rows: auto 1fr;
   gap:28px;
-  align-items:stretch
+  align-items:start;
 }
 .contact-left h2{
   margin-top:0;
   color:#fff;
 }
+/* place heading/intro at the top of the right column (above the form)
+   and reserve the left column for an image / links */
 .contact-left{
-  min-height:400px;
+  grid-column:2;
+  grid-row:1;
+  min-height:0;
   display:flex;
   flex-direction:column;
-  justify-content:flex-start
+  justify-content:flex-start;
+  align-items:flex-start;
+  text-align:left;
+  padding-bottom:6px;
 }
+.contact-left p{max-width:520px;text-align:left}
+
+.contact-form{
+  grid-column:2;
+  grid-row:2;
+}
+
+/* Left side contact column for icons/links */
+.contact-side{
+  grid-column:1;
+  grid-row:2; /* align with the form row so buttons appear next to the form */
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+  align-items:flex-end; /* align buttons to the right edge (closer to form) */
+  justify-content:flex-start;
+  padding-top:6px;
+  justify-self:end; /* push the block to the right within the grid cell */
+  margin-right:8px; /* slightly closer to the form */
+  align-self:start;
+}
+.contact-icon{
+  display:inline-flex;
+  flex-direction:column; /* icon above label inside the button */
+  align-items:center;
+  justify-content:center;
+  gap:6px;
+  padding:8px 10px;
+  width:120px; /* rectangular small button */
+  height:56px;
+  background:rgba(255,255,255,0.03);
+  color:#ffffff;
+  text-decoration:none;
+  border-radius:8px;
+  font-weight:700;
+  font-size:0.9rem;
+}
+.contact-icon .icon{width:20px;height:20px;fill:currentColor}
+.contact-icon span{display:block}
+.contact-icon:hover{background:rgba(255,255,255,0.06)}
 .contact-form{
   display:flex;
   flex-direction:column;
@@ -396,13 +517,17 @@ body::before{
 /* Responsive */
 @media (max-width:980px){
   .hero-inner{grid-template-columns:1fr 1fr}
-  .project{grid-template-columns:1fr}
+  .project{flex-direction:column;padding:14px}
   .contact-inner{grid-template-columns:1fr}
 }
 @media (max-width:720px){
-  .nav-links{display:none;position:absolute;right:20px;top:62px;flex-direction:column;background:#000;padding:12px;border-radius:8px;box-shadow:0 12px 30px rgba(16,4,37,0.06)}
-  .nav-links.show{display:flex}
-  .hamburger{display:block}
+  .nav-links{display:none;position:absolute;right:20px;top:62px;flex-direction:column;background:#000;padding:12px;border-radius:8px;box-shadow:0 12px 30px rgba(16,4,37,0.06);z-index:9999}
+  .nav-links.show{display:flex;flex-direction:column}
+  /* Force hamburger visible and fixed so it's never hidden by layout */
+  .hamburger{display:flex !important;position:fixed !important;right:16px !important;top:12px !important;z-index:100000 !important;background:rgba(255,255,255,0.06) !important;padding:8px 10px !important;border-radius:10px !important;align-items:center;justify-content:center;box-shadow:0 8px 24px rgba(0,0,0,0.6) !important;width:48px !important;height:48px !important}
+  .hamburger span{background:#fff !important;width:24px !important;height:3px !important;border-radius:3px}
+  .hamburger:hover{background:rgba(255,255,255,0.12) !important}
+  .hamburger:focus{outline:none;box-shadow:0 8px 24px rgba(208,0,211,0.18) !important}
   .hero-inner{grid-template-columns:1fr;gap:20px;padding-bottom:12px}
   .hero-right{order:2}
   .hero-left{order:1}
@@ -411,8 +536,5 @@ body::before{
 
 
 
-a   link-btn  {
-  color: white;
-}                                 
 
 
